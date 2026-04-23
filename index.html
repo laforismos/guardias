@@ -286,6 +286,26 @@
     filter: saturate(1.05) brightness(0.9);
   }
 
+  .photo-credit {
+    font-size: 0.65rem;
+    color: rgba(253,250,245,0.35);
+    letter-spacing: 0.06em;
+    margin-top: 0.4rem;
+    text-align: right;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-credit {
+    position: absolute;
+    bottom: 5rem;
+    right: 1.5rem;
+    font-size: 0.62rem;
+    color: rgba(253,250,245,0.3);
+    letter-spacing: 0.06em;
+    z-index: 2;
+  }
+
   .sobre-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -579,6 +599,7 @@
     <span>Explorar</span>
     <div class="scroll-line"></div>
   </div>
+  <p class="hero-credit">Foto: Ori Junior</p>
 </section>
 
 <!-- ═══════════════════════════ SOBRE ═══════════════════════════ -->
@@ -586,7 +607,8 @@
   <div class="container">
     <div class="sobre-grid">
       <div class="sobre-img-wrap reveal">
-        <img src="BG_OKOK.jpg" alt="Comunidade ribeirinha amazônica">
+        <img src="barco.jpg" alt="Comunidade ribeirinha amazônica">
+        <p class="photo-credit">Foto: Ori Junior</p>
       </div>
       <div>
         <p class="section-tag reveal">Sobre o projeto</p>
