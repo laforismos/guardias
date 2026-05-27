@@ -40,6 +40,43 @@
     overflow-x: hidden;
   }
 
+  /* ── SITE HEADER (logo sobre o hero, absoluto — sai com scroll) ── */
+  .site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 1.8rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; /* não interfere em hover/clicks do hero */
+  }
+
+  .site-header .logo-link {
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .site-header .logo-link:hover {
+    opacity: 0.8;
+  }
+
+  .site-header .logo-svg {
+    width: 100px;
+    height: 100px;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .site-header { padding: 1.2rem 1.5rem; }
+    .site-header .logo-svg { width: 78px; height: 78px; }
+  }
+
   /* ── HERO ── */
   .hero {
     position: relative;
@@ -580,6 +617,27 @@
 </style>
 </head>
 <body>
+
+<!-- ═══════════════════════════ SITE HEADER ═══════════════════════════ -->
+<header class="site-header">
+  <a href="#" class="logo-link" aria-label="Guardiãs da Floresta — início">
+    <svg class="logo-svg" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g clip-path="url(#clip0_header_logo)">
+        <path d="M108 157.869H150.619V104.255H193.238V157.869H235.857V104.255H278.475V157.869H321.094V104.255H363.713V157.869H406.332V104.255H448.951V157.869H491.57" stroke="#fdfaf5" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M250.104 487.203C253.747 487.203 256.706 490.177 256.706 493.851C256.706 497.526 253.747 500.5 250.104 500.5C246.46 500.5 243.5 497.526 243.5 493.851C243.5 490.176 246.46 487.203 250.104 487.203Z" fill="#fdfaf5" stroke="#fdfaf5"/>
+        <path d="M299.826 487.203C303.469 487.203 306.428 490.177 306.428 493.851C306.428 497.526 303.469 500.5 299.826 500.5C296.182 500.5 293.222 497.526 293.222 493.851C293.222 490.176 296.182 487.203 299.826 487.203Z" fill="#fdfaf5" stroke="#fdfaf5"/>
+        <path d="M349.547 487.203C353.191 487.203 356.15 490.177 356.15 493.851C356.15 497.526 353.191 500.5 349.547 500.5C345.904 500.5 342.944 497.526 342.944 493.851C342.944 490.176 345.904 487.203 349.547 487.203Z" fill="#fdfaf5" stroke="#fdfaf5"/>
+        <path d="M288.638 214.843C288.638 214.843 384.868 230.784 399.891 294.532C409.409 334.903 405.733 367.894 380.748 401.742C365.387 422.562 338.733 437.396 313.481 442.489C229.238 459.503 156.964 368.484 219.755 285.739C254.561 239.881 319.288 268.082 327.315 273.479C339.177 281.432 348.322 292.78 353.028 306.309C360.113 326.718 359.439 342.945 350.524 364.248C347.044 372.576 334.098 398.883 295.191 398.382C279.475 398.168 264.86 390.412 255.324 377.848C241.526 359.691 240.195 345.179 251.009 323.43C255.466 314.494 263.333 307.542 272.958 305.004C280.31 303.074 287.075 303.896 295.475 307.489C301.939 310.259 307.479 315.066 310.551 321.428C314.174 328.863 313.801 336.101 309.202 345.287" stroke="#fdfaf5" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M300.272 338C316.388 338.814 315.68 362.247 299.471 361.998C283.972 360.98 284.292 338.701 299.746 338H300.272Z" fill="#B5421E"/>
+      </g>
+      <defs>
+        <clipPath id="clip0_header_logo">
+          <rect width="396" height="403" fill="white" transform="translate(102 98)"/>
+        </clipPath>
+      </defs>
+    </svg>
+  </a>
+</header>
 
 <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
 <section class="hero">
